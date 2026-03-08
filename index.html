@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infusion Drug Billing Certification Course</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Infusion Drug Billing Certification Course</h1>
+            <p class="subtitle">Master infusion billing and earn your certification</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overallProgress"></div>
+            </div>
+            <p class="progress-text" id="progressText">0% Complete</p>
+        </header>
+
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-card">
+                <h2>Welcome to Infusion Drug Billing Certification</h2>
+                <p>This comprehensive course will teach you everything you need to know about infusion drug billing.</p>
+
+                <div class="course-info">
+                    <h3>Course Structure:</h3>
+                    <ul>
+                        <li>6 Learning Modules with quizzes (10 questions each)</li>
+                        <li>1 Final Comprehensive Exam (20 questions)</li>
+                        <li>95% passing score required for each quiz</li>
+                        <li>Unlimited attempts allowed</li>
+                        <li>Certificate upon completion</li>
+                    </ul>
+                </div>
+
+                <div class="input-group">
+                    <label for="studentName">Enter Your Full Name:</label>
+                    <input type="text" id="studentName" placeholder="First Name Last Name" required>
+                </div>
+
+                <button class="btn btn-primary" onclick="startCourse()">Start Course</button>
+            </div>
+        </div>
+
+        <!-- Module List Screen -->
+        <div id="moduleScreen" class="screen">
+            <h2>Course Modules</h2>
+            <div class="module-list" id="moduleList"></div>
+            <button class="btn btn-secondary" onclick="showWelcome()">Back to Welcome</button>
+        </div>
+
+        <!-- Lesson Screen -->
+        <div id="lessonScreen" class="screen">
+            <div class="lesson-header">
+                <h2 id="lessonTitle"></h2>
+                <button class="btn btn-secondary" onclick="showModules()">Back to Modules</button>
+            </div>
+            <div class="lesson-content" id="lessonContent"></div>
+            <button class="btn btn-primary" onclick="startQuiz()">Take Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <h2 id="quizTitle"></h2>
+                <p id="quizProgress"></p>
+            </div>
+            <div class="question-container" id="questionContainer"></div>
+            <div class="quiz-navigation">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()">Previous</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next</button>
+                <button class="btn btn-success" id="submitBtn" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-card" id="resultsCard"></div>
+        </div>
+
+        <!-- Certificate Screen -->
+        <div id="certificateScreen" class="screen">
+            <div class="certificate-preview">
+                <h2>🎓 Congratulations!</h2>
+                <p>You have successfully completed the Infusion Drug Billing Certification Course.</p>
+                <div class="certificate-container" id="certificateContainer"></div>
+                <button class="btn btn-primary" onclick="downloadCertificate()">Download Certificate</button>
+                <button class="btn btn-secondary" onclick="resetCourse()">Start New Course</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="course.js"></script>
+</body>
+</html>
