@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infusion Drug Billing Certification | Professional Training Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --primary: #2D3E5F;
+            --primary-light: #4A6FA5;
+            --accent: #E85D75;
+            --accent-light: #FF8BA0;
+            --success: #00B894;
+            --info: #74B9FF;
+            --bg: #FAFBFC;
+            --bg-light: #FFFFFF;
+            --text: #2D3436;
+            --text-secondary: #636E72;
+            --text-muted: #B2BEC3;
+            --border: #E8EDF2;
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(45, 62, 95, 0.08);
+            --shadow-md: 0 4px 16px rgba(45, 62, 95, 0.12);
+            --shadow-lg: 0 8px 32px rgba(45, 62, 95, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--bg-light);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 12px rgba(232, 93, 117, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            box-shadow: 0 6px 20px rgba(232, 93, 117, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Illustration */
+        .hero-illustration {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .illustration-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* SVG Illustration */
+        .iv-illustration {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Floating Elements */
+        .floating-badge {
+            position: absolute;
+            background: var(--bg-light);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-badge.badge-1 {
+            top: 10%;
+            right: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-badge.badge-2 {
+            bottom: 15%;
+            left: 0%;
+            animation-delay: 1s;
+        }
+
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .badge-icon.blue {
+            background: linear-gradient(135deg, #74B9FF 0%, #0984E3 100%);
+            color: white;
+        }
+
+        .badge-icon.green {
+            background: linear-gradient(135deg, #55EFC4 0%, #00B894 100%);
+            color: white;
+        }
+
+        .badge-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            background: var(--bg-light);
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon.purple {
+            background: linear-gradient(135deg, #A29BFE 0%, #6C5CE7 100%);
+        }
+
+        .feature-icon.pink {
+            background: linear-gradient(135deg, #FD79A8 0%, #E84393 100%);
+        }
+
+        .feature-icon.blue {
+            background: linear-gradient(135deg, #74B9FF 0%, #0984E3 100%);
+        }
+
+        .feature-icon.green {
+            background: linear-gradient(135deg, #55EFC4 0%, #00B894 100%);
+        }
+
+        .feature-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 5%;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 3rem 5%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-illustration {
+                order: -1;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">💉</div>
+            <span>Infusion Billing</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Course Details</a></li>
+            <li><a href="index.html">Start Course</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>INFUSION DRUG BILLING CERTIFICATION</h1>
+            <p class="subtitle">Master the complexities of infusion therapy billing. Learn J-codes, administration codes, medical necessity, and become a certified infusion billing specialist.</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">START LEARNING</a>
+                <a href="#features" class="btn btn-secondary">COURSE DETAILS</a>
+            </div>
+        </div>
+
+        <div class="hero-illustration">
+            <div class="illustration-container">
+                <!-- Main SVG Illustration -->
+                <svg class="iv-illustration" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- IV Bag -->
+                    <defs>
+                        <linearGradient id="ivBagGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- IV Pole -->
+                    <line x1="380" y1="50" x2="380" y2="450" stroke="#B2BEC3" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="380" cy="460" r="15" fill="#636E72"/>
+
+                    <!-- IV Bag -->
+                    <rect x="320" y="80" width="120" height="160" rx="10" fill="url(#ivBagGradient)" stroke="#74B9FF" stroke-width="3"/>
+
+                    <!-- Liquid in bag -->
+                    <circle cx="345" cy="140" r="12" fill="#FFE66D" opacity="0.7"/>
+                    <circle cx="380" cy="160" r="15" fill="#4ECDC4" opacity="0.7"/>
+                    <circle cx="410" cy="135" r="10" fill="#FF6B6B" opacity="0.7"/>
+                    <circle cx="365" cy="190" r="14" fill="#95E1D3" opacity="0.7"/>
+
+                    <!-- IV Label -->
+                    <rect x="330" y="95" width="100" height="25" rx="4" fill="white" opacity="0.9"/>
+                    <text x="380" y="111" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" fill="#2D3E5F">INFUSION RX</text>
+
+                    <!-- IV Tube -->
+                    <path d="M 380 240 Q 350 280, 280 320" stroke="#74B9FF" stroke-width="3" fill="none"/>
+
+                    <!-- Medical Professional -->
+                    <circle cx="180" cy="220" r="35" fill="#4A6FA5"/>
+                    <rect x="150" y="255" width="60" height="80" rx="8" fill="#2D3E5F"/>
+                    <rect x="135" y="270" width="25" height="50" rx="8" fill="#4A6FA5"/>
+                    <rect x="210" y="270" width="25" height="50" rx="8" fill="#4A6FA5"/>
+
+                    <!-- Stethoscope -->
+                    <path d="M 165 260 Q 180 250, 195 260" stroke="#00B894" stroke-width="3" fill="none"/>
+
+                    <!-- Patient -->
+                    <circle cx="280" cy="340" r="30" fill="#E85D75"/>
+                    <rect x="255" y="370" width="50" height="70" rx="8" fill="#FF8BA0"/>
+                    <rect x="240" y="385" width="20" height="40" rx="6" fill="#E85D75"/>
+                    <rect x="305" y="385" width="20" height="40" rx="6" fill="#E85D75"/>
+
+                    <!-- Vitamin Icons -->
+                    <g transform="translate(480, 100)">
+                        <circle cx="0" cy="0" r="25" fill="#74B9FF" opacity="0.2"/>
+                        <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#0984E3">C</text>
+                    </g>
+
+                    <g transform="translate(520, 180)">
+                        <circle cx="0" cy="0" r="25" fill="#E85D75" opacity="0.2"/>
+                        <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E85D75">E</text>
+                    </g>
+
+                    <g transform="translate(540, 280)">
+                        <circle cx="0" cy="0" r="25" fill="#FD79A8" opacity="0.2"/>
+                        <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E84393">B</text>
+                    </g>
+
+                    <g transform="translate(500, 360)">
+                        <circle cx="0" cy="0" r="25" fill="#FDCB6E" opacity="0.2"/>
+                        <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E17055">D</text>
+                    </g>
+                </svg>
+
+                <!-- Floating Badges -->
+                <div class="floating-badge badge-1">
+                    <div class="badge-icon blue">J</div>
+                    <div class="badge-text">J-Codes Mastery</div>
+                </div>
+
+                <div class="floating-badge badge-2">
+                    <div class="badge-icon green">✓</div>
+                    <div class="badge-text">95% Pass Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="section-header" id="about">
+                <h2>What You'll Master</h2>
+                <p>Comprehensive training covering all aspects of infusion drug billing and reimbursement</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon purple">📋</div>
+                    <h3>Drug Coding</h3>
+                    <p>Master J-codes, HCPCS codes, and NDC reporting for all infusion medications and biologics.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon pink">💉</div>
+                    <h3>Administration Billing</h3>
+                    <p>Learn CPT codes 96365-96549 for infusion, injection, and push administration services.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon blue">📊</div>
+                    <h3>Medical Necessity</h3>
+                    <p>Understand LCD/NCD requirements, diagnosis linking, and documentation standards.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green">✅</div>
+                    <h3>Certification</h3>
+                    <p>Earn your official certificate with 6 module quizzes and a comprehensive final exam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>6</h3>
+                <p>Learning Modules</p>
+            </div>
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p>Required Pass Score</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Practice Questions</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Access Anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Infusion Drug Billing Certification. All rights reserved.</p>
+    </footer>
+</body>
+</html>

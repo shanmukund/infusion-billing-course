@@ -6,7 +6,7 @@
     <title>Infusion Drug Billing Certification Course</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="course.css">
 </head>
 <body>
@@ -23,19 +23,130 @@
 
         <!-- Welcome Screen -->
         <div id="welcomeScreen" class="screen active">
-            <div class="welcome-card">
-                <h2>Welcome to Infusion Drug Billing Certification</h2>
-                <p>This comprehensive course will teach you everything you need to know about infusion drug billing.</p>
+            <div class="landing-hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">INFUSION DRUG<br>BILLING CERTIFICATION</h1>
+                    <p class="hero-subtitle">Master the complexities of infusion therapy billing. Learn J-codes, administration codes, medical necessity, and become a certified infusion billing specialist.</p>
 
-                <div class="course-info">
-                    <h3>Course Structure:</h3>
-                    <ul>
-                        <li>6 Learning Modules with quizzes (10 questions each)</li>
-                        <li>1 Final Comprehensive Exam (20 questions)</li>
-                        <li>95% passing score required for each quiz</li>
-                        <li>Unlimited attempts allowed</li>
-                        <li>Certificate upon completion</li>
-                    </ul>
+                    <div class="course-highlights">
+                        <div class="highlight-badge">
+                            <span class="badge-icon">📋</span>
+                            <span class="badge-text">6 Modules</span>
+                        </div>
+                        <div class="highlight-badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">95% Pass Rate</span>
+                        </div>
+                        <div class="highlight-badge">
+                            <span class="badge-icon">🎓</span>
+                            <span class="badge-text">Certificate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-illustration">
+                    <!-- SVG Illustration -->
+                    <svg class="iv-illustration" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- IV Bag -->
+                        <defs>
+                            <linearGradient id="ivBagGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- IV Pole -->
+                        <line x1="380" y1="50" x2="380" y2="450" stroke="#B2BEC3" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="380" cy="460" r="15" fill="#636E72"/>
+
+                        <!-- IV Bag -->
+                        <rect x="320" y="80" width="120" height="160" rx="10" fill="url(#ivBagGradient)" stroke="#74B9FF" stroke-width="3"/>
+
+                        <!-- Liquid in bag -->
+                        <circle cx="345" cy="140" r="12" fill="#FFE66D" opacity="0.7"/>
+                        <circle cx="380" cy="160" r="15" fill="#4ECDC4" opacity="0.7"/>
+                        <circle cx="410" cy="135" r="10" fill="#FF6B6B" opacity="0.7"/>
+                        <circle cx="365" cy="190" r="14" fill="#95E1D3" opacity="0.7"/>
+
+                        <!-- IV Label -->
+                        <rect x="330" y="95" width="100" height="25" rx="4" fill="white" opacity="0.9"/>
+                        <text x="380" y="111" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" fill="#2D3E5F">INFUSION RX</text>
+
+                        <!-- IV Tube -->
+                        <path d="M 380 240 Q 350 280, 280 320" stroke="#74B9FF" stroke-width="3" fill="none"/>
+
+                        <!-- Medical Professional -->
+                        <circle cx="180" cy="220" r="35" fill="#4A6FA5"/>
+                        <rect x="150" y="255" width="60" height="80" rx="8" fill="#2D3E5F"/>
+                        <rect x="135" y="270" width="25" height="50" rx="8" fill="#4A6FA5"/>
+                        <rect x="210" y="270" width="25" height="50" rx="8" fill="#4A6FA5"/>
+
+                        <!-- Stethoscope -->
+                        <path d="M 165 260 Q 180 250, 195 260" stroke="#00B894" stroke-width="3" fill="none"/>
+
+                        <!-- Patient -->
+                        <circle cx="280" cy="340" r="30" fill="#E85D75"/>
+                        <rect x="255" y="370" width="50" height="70" rx="8" fill="#FF8BA0"/>
+                        <rect x="240" y="385" width="20" height="40" rx="6" fill="#E85D75"/>
+                        <rect x="305" y="385" width="20" height="40" rx="6" fill="#E85D75"/>
+
+                        <!-- Vitamin Icons -->
+                        <g transform="translate(480, 100)">
+                            <circle cx="0" cy="0" r="25" fill="#74B9FF" opacity="0.2"/>
+                            <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#0984E3">C</text>
+                        </g>
+
+                        <g transform="translate(520, 180)">
+                            <circle cx="0" cy="0" r="25" fill="#E85D75" opacity="0.2"/>
+                            <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E85D75">E</text>
+                        </g>
+
+                        <g transform="translate(540, 280)">
+                            <circle cx="0" cy="0" r="25" fill="#FD79A8" opacity="0.2"/>
+                            <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E84393">B</text>
+                        </g>
+
+                        <g transform="translate(500, 360)">
+                            <circle cx="0" cy="0" r="25" fill="#FDCB6E" opacity="0.2"/>
+                            <text x="0" y="8" font-family="Poppins" font-size="20" font-weight="700" text-anchor="middle" fill="#E17055">D</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="welcome-card modern">
+                <h2>Begin Your Certification Journey</h2>
+                <p>Enter your details to start the comprehensive infusion drug billing certification program.</p>
+
+                <div class="course-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon purple">📋</div>
+                        <div class="feature-text">
+                            <h4>Drug Coding</h4>
+                            <p>Master J-codes & HCPCS</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon pink">💉</div>
+                        <div class="feature-text">
+                            <h4>Administration</h4>
+                            <p>CPT 96365-96549</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon blue">📊</div>
+                        <div class="feature-text">
+                            <h4>Medical Necessity</h4>
+                            <p>LCD/NCD Requirements</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon green">✅</div>
+                        <div class="feature-text">
+                            <h4>Certification</h4>
+                            <p>Official Certificate</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="input-group">
@@ -43,7 +154,19 @@
                     <input type="text" id="studentName" placeholder="First Name Last Name" required>
                 </div>
 
-                <button class="btn btn-primary" onclick="startCourse()">Start Course</button>
+                <button class="btn btn-primary btn-large" onclick="startCourse()">START LEARNING</button>
+
+                <div class="course-stats">
+                    <div class="stat">
+                        <strong>6</strong> Modules
+                    </div>
+                    <div class="stat">
+                        <strong>95%</strong> Pass Score
+                    </div>
+                    <div class="stat">
+                        <strong>100+</strong> Questions
+                    </div>
+                </div>
             </div>
         </div>
 
